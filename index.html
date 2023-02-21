@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf Apps</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="head_bar">
+  <h1 class="head_bar__title">Bookshelf Apps</h1>
+</header>
+<main class="flex-container-column">
+  <div class="flex-container-row">
+    <div class="flexing1">
+      <section class="input_section">
+        <h2>Masukkan Buku Baru</h2>
+        <form id="inputBook">
+          <div class="input">
+            <label for="inputBookTitle">Judul</label>
+            <input id="inputBookTitle" type="text" placeholder="Tulis Judul Buku..." required>
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Penulis</label>
+            <input id="inputBookAuthor" type="text" placeholder="Tulis Nama Penulis Buku..." required>
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Tahun</label>
+            <input id="inputBookYear" type="number" placeholder="Tulis Tahun Terbit Buku..." required>
+          </div>
+          <div class="input_inline">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+            <input id="inputBookIsComplete" type="checkbox" name="checkbox">
+          </div>
+          <button id="bookSubmit" type="submit">Masukkan Buku ke rak
+            <span id="belum">Belum selesai dibaca</span>
+            <span id="sudah" hidden>Sudah selesai dibaca</span> </button>
+        </form>
+      </section>
+      <section class="search_section">
+        <h2>Cari Judul Buku</h2>
+        <form id="searchBook">
+          <label for="searchBookTitle">Judul</label>
+          <input id="searchBookTitle" type="text" placeholder="Cari judul buku (exact match)">
+          <button id="searchSubmit" type="submit">Cari</button>
+        </form>
+        <div id="hasilPencarian">
+
+        </div>
+      </section>
+      <section class="book_shelf">
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookshelfList" class="book_list">
+        </div>
+      </section>
+      <section class="book_shelf">
+        <h2>Selesai dibaca</h2>
+        <div id="completeBookshelfList" class="book_list">
+        </div>
+      </section>
+    </div>
+
+    <div class="flexing2">
+      <aside>
+          <section>
+            <h3>Jumlah Buku :</h3> <b><div id="jumlahBuku">0</div></b>
+          </section>
+      </aside>
+    </div>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+<script src="button.js"></script>
+
+</body>
+<footer>
+Made by M Ashobta Azry for Dicoding Class
+</footer>
+</html>
